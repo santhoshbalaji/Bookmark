@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Bookmark</title>
+        <link rel = "shortcut icon" href = "http://icons.iconarchive.com/icons/martz90/hex/512/bookmark-icon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet"> -->
+        <link href="https://github.com/google/fonts.git" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Cabin|Cormorant+Garamond|Eczar|Gentium+Basic|Inconsolata|Lato|Libre+Baskerville|Libre+Franklin|Montserrat|Noto+Sans|Nunito|Nunito+Sans|Open+Sans|Oswald|Pacifico|Poppins|Proza+Libre|Quicksand|Roboto|Roboto+Condensed|Rubik|Taviraj|Trirong|VT323|Work+Sans" rel="stylesheet">  -->
+        <link rel="stylesheet"  href="min-width1224.css" />
+        <!-- media="only screen and (min-width: 1224px)" -->
+        <!-- <link rel="stylesheet" media="only screen and (min-width: 1824px)" href="min-width1824.css" /> -->
+    </head>
+    <body onload = DisplayCategories('CatDetails','p')>
+        <div id = "Whole" >
+            <input type = "text" id = "addcategory" placeholder="Enter" onkeyup = "Addcate(event)" onfocusout = "Addcate(event)" >
+            <div id = "left" >
+                <div id = "topBarLeft" >
+                    <h1>BOOKMARK</h1>
+                </div>
+                <div id = "BottomLeft" >
+                    <div id = "category" >
+                        <details id = "CatDetails" open >
+                            <summary>Categories</summary>
+                        </details>
+                        <button onclick = "Addcategory('addcategory','addcategory')" ><i class="material-icons">&#xE145;</i></button>
+                        
+                    </div>
+                    <div id = "Displaycategory" ></div>
+                </div>
+            </div>
+            <div id = "right" >
+                <div id = "topBarRight" >
+                    <input type = "text" id = "searchBox" size = "100" placeholder="SEARCH" onkeyup="check()" onfocusout = "out()" >
+                </div>
+                <div id = "BottomRight" >
+
+                </div>
+                <div id = "Settings_Div" onmouseover = "Setting()" onmouseout="Settingout()" >
+                    <div class = "Settings_icons" id = "Theme" ><i class="material-icons">color_lens</i></div>
+                    <div class = "Settings_icons" id = "Font"  ><i class="material-icons">font_download</i></div>
+                    <div class = "Settings_icons" id = "Color" ><i class="material-icons">colorize</i></div>
+                    <div class = "Settings_icons" id = "Setting"  ><i class="material-icons">settings</i></div>
+                </div>
+                <div class = "Right_icons" id = "Grid" onclick = "Gridview()" ><i class="material-icons">grid_on</i></div>
+                <button class = "Right_icons" id = "AddUrl" onclick = "AddUrl()" ><i class="material-icons">&#xE145;</i></button>
+            </div>
+            <div id = "FormDiv" onclick = "AddUrl()"  >			
+            </div>	
+            <div id = "Form">
+                    <h6>Add Bookmark <button id = "g" onclick = "AddUrl()"><span>&#215;</span></button></h6>
+                    <h4 class = "H" >Name : </h4> 
+                    <input class = "H" type = "text" id = "U" placeholder = "Enter name"  height = "100">
+                    <h4 class = "H" >Url : </h4>
+                    <input class = "H" type = "text" id = "Uu" placeholder = "Enter url" >
+                    <h4 class = "H" >Category : </h4>
+                    <!-- <input class = "H" type = "text" id = "u" placeholder = "Enter category " > -->
+                    <select id = "CatList" required>
+                        <option>Select</option>
+                    </select>
+                    <hr>
+                    <div id = "Btn">	
+                        <button class = "F" id = "f"  onclick  =   "New()">New Bookmark</button>
+                        <button class = "F" id = "f1" onclick  =  "AddUrl()">Cancel</button>
+                    </div>
+            </div>
+            <div id = "Delete" ><i class="material-icons">delete</i><i class="material-icons">delete_sweep</i></div>
+        </div>
+
+        <script src = "index.js" ></script>
+    </body>
+</html>

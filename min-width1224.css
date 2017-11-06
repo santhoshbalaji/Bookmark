@@ -1,0 +1,310 @@
+/* Desktops and laptops ----------- */
+/*@media only screen and (min-width: 1224px){*/
+    *{
+        margin:0px;
+        font-family: 'Julius Sans One', sans-serif;
+        text-align:center;
+        padding:0px;
+        box-sizing: border-box;
+        border-style:none;
+    }
+    button{
+        outline-style:none;
+    }
+    body{
+        width:100%;
+        height:1000px;
+    }
+    #whole{
+        width:100%;
+        height:1000px;
+        overflow: auto;
+    }
+    #left{
+        width:20%;
+        height: 1000px;
+        float:left;
+        background-color: black;
+        color:white;
+    }
+    #right{
+        width:80%;
+        height: 1000px;
+        float:left;
+    }
+    #topBarLeft{
+        padding:2.5%;
+        width:100%;
+        height:5%;
+        /* background-color: rgb(131, 189, 157); */
+        animation: color 5s ease-in infinite alternate;
+    }
+    #topBarRight{
+        background-color: #000000;
+        /* padding:3%; */
+        width:100%;
+        height:5%;
+    }
+    #topBarRight > input{
+        height:100%;
+        width:100%;
+    }
+    .BottomRight > .Urldiv{
+        max-width:45%;
+        float:left;
+    }
+    #category{
+        overflow: auto;
+        padding:2%;
+    }
+    #category > details{
+        width:80%;
+        padding:2%;
+    }
+    #category * {
+        float: left;
+    }
+    #CatDetails > p{
+        width:100%;
+        padding:5%;
+    }
+    #category > button,#right > button{
+        background:transparent;
+        border:none;
+        padding:2%;
+    }
+    #right > #AddUrl{
+      padding:0px;
+      position:fixed;
+      top:95%;
+      left:95%;
+      border-radius:50%;
+      background-color: black;
+      color:white;
+      width:40px;
+      height:40px;
+    }
+    #Grid{
+        padding:0px;
+        position:fixed;
+        top:90%;
+        left:95%;
+        color:white;
+        width:40px;
+        height:40px;
+        background-color: black;
+        width:40px;
+        height:40px;
+        border-radius:50%;
+    }
+    .Settings_icons,#Settings_Div{
+        padding:0px;
+        position:fixed;
+        top:85%;
+        left:95%;
+        color:white;
+        width:40px;
+        height:40px;
+        background-color: black;
+        width:40px;
+        height:40px;
+        border-radius:50%;
+        transition:all 1s;
+    }
+    .Settings_Color{
+        top:80%;
+    }
+    .Settings_Font{
+        top:75%;
+    }
+    .Settings_Theme{
+        top:70%;
+    }
+    #Grid > i,#Setting > div > i,.Settings_icons > i {
+        padding: 20%;
+    }
+    #category > button > i{
+        color:white;
+    }
+    #addcategory{
+        position:fixed;
+        width:15%;
+        height:3%;
+        top:-50%;
+        left:5%;
+        transition: 1s all;
+    }
+    .Urldiv{
+        margin:1%;
+        padding:1%;
+        background: rgb(131, 189, 157);
+        color:#ffffff;
+        font-size: 20px;
+        float:left;
+        width:95%;
+    }
+    .Urldiv > p{
+        padding:1%;
+    }
+    .catip{
+        position: absolute;
+        top:0;
+        width:100%;
+        height:100%;
+    }
+    #FormDiv{
+        width:100%;
+        height:100%;
+    }
+    #Form{
+        width:30%;
+        padding:1%;
+        /* border:1px solid blue; */
+        background-color: rgb(245, 139, 139);
+        color:white;
+        overflow: auto;
+        position:absolute;
+        top:-50%;
+        left:35%;
+        /* display:none; */
+        transition:all 1s;
+        border-radius:2vh;
+    }
+    #Form > *{
+        padding:1%;
+    }h6{
+        margin:0px;
+        text-align:left;
+        font-size:2.5%;
+        padding:0.5%;
+    }
+    #U{
+        width:100%;
+    }
+    #u{
+        width:100%;
+    }
+    .F{
+        margin-top: 2%;
+        /* background-color:; */
+        border:none;
+        padding: 0.5%;
+    }
+    .H{
+        margin:1%;
+    }
+    #g{
+        float:right;
+        font-size: 3%;
+        background-color: transparent;
+        border: none;
+        padding:0px;
+        display:block;
+    }
+    #Btn{
+        float:right;
+    }
+    #Add{
+        padding:1%;
+        font-size: 2%;
+        background-color:white;
+        border:none;
+        color:#9f85de;
+        margin-left:20%;
+    }
+    .Ani{
+        animation:Pagein 1s 1 both running;
+    }
+    .Aniout{
+        animation:Pageout 1s 1 both running;
+    }
+    #Delete{
+        position:fixed;
+        top:90%;
+        left:5%;
+        /* border:1px solid #ffddcc; */
+        width:10%;
+        height:10%;
+       
+    }
+    #Delete > i {
+        font-size: 5vh;
+        color:white;
+    }
+    #Delete > i:nth-child(2){
+        display:none;
+    }
+    #Delete:hover > i:nth-child(2){
+        display:block;
+    }
+    #Delete:hover > i{
+        display:none;
+    }
+    @keyframes color{
+        0%{
+            background:rgb(241, 229, 229);
+        }
+        25%{
+            background:rgb(250, 188, 188);
+        }
+        50%{
+            background:rgb(245, 139, 139);
+        }
+        75%{
+            background: rgb(248, 108, 98);
+        }
+        100%{
+            background: rgb(240, 47, 41);
+        }
+    }
+    @keyframes Pagein {
+        0%{
+            transform: translateY(800px) translateX(800px) rotate(360deg);
+        }   
+        /* 60%{
+            transform: translateY(400px) translateX(400px) rotate(180deg);
+        } */
+        100%{
+            transform: translateY(0px) translateX(0px) rotate(0deg);
+        }
+    }
+    @keyframes Pageout {
+        0%{
+            transform: translateY(0px) translateX(0px) rotate(0deg);
+        }   
+        /* 60%{
+            transform: translateY(400px) rotate(30deg);
+        } */
+        100%{
+            transform: translateY(0px) rotate(0deg);
+        }
+    }
+    @keyframes Addpagein {
+        0%{
+            top:-50%;
+            transform: translateY() rotate(0deg);
+        }
+        50%{
+            top:7%;
+            transform: translateY() rotate(180deg);
+        }
+        100%{
+            top:15%;
+            transform: translateY(0) rotate(360deg);
+        }
+    }
+    @keyframes Addpageout {
+        0%{
+            top:15%;
+            transform: translateY(0) rotate(360deg);
+        }
+        /* 50%{
+            top:7%;
+            transform: translate3d(20) rotate(180deg);
+        } */
+        100%{
+            top:-50%;
+            transform: translateY(0) rotate(0deg);
+        }
+    }
+/*}*/
